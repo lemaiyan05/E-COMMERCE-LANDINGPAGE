@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <body>
+    <h3>Pay with M-Pesa</h3>
+    <input id="phone" placeholder="07XXXXXXXX" />
+    <input id="amount" placeholder="Amount" />
+    <button id="pay">Pay</button>
+    <pre id="out"></pre>
+
+    <script>
+      function out(x){ document.getElementById('out').innerText = JSON.stringify(x, null, 2); }
+      async function pay(){
+        const phone = document.getElementById('phone').value;
+        const amount = document.getElementById('amount').value;
+        const res = await fetch('/api/pay', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({ phone, amount })
+        });
+        const j = await res.json();
+        out(j);
+      }
+      document.getElementById('pay').onclick = pay;
+    </script>
+  </body>
+</html>
