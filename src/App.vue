@@ -890,7 +890,7 @@ const messageClass = ref("");
 const fetchProducts = async () => {
   loadingProducts.value = true;
   try {
-    const res = await axios.get("http://localhost:5000/api/products");
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/products`);
     products.value = res.data.products || [];
     console.log("✅ Products loaded:", products.value);
   } catch (err) {
@@ -986,7 +986,7 @@ const payNow = async () => {
   }
 
   try {
-    const response = await fetch("http://localhost:5000/api/create-checkout-session", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/create-checkout-session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: Math.round(amountInUSD * 100) }), // USD → cents
@@ -1048,7 +1048,7 @@ const contactForm = reactive({
 
 const handleContact = async () => {
   try {
-    await axios.post("http://localhost:5000/api/contact", { ...contactForm });
+    await axios.post(`${import.meta.env.VITE_API_URL}/api/contact`, { ...contactForm });
     alert("✅ Message sent successfully!");
     contactForm.name = "";
     contactForm.email = "";
@@ -1083,7 +1083,7 @@ const switchToLogin = () => {
 // Signup function
 const signup = async () => {
   try {
-    const res = await axios.post("http://localhost:5000/api/auth/signup", signupForm);
+    const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/signup`, signupForm);
 
     // ✅ Ensure success check is strict and reliable
     if (res.data && res.data.success === true) {
@@ -1117,7 +1117,7 @@ const signup = async () => {
 // Login function
 const login = async () => {
   try {
-    const res = await axios.post("http://localhost:5000/api/auth/login", loginForm);
+    const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, loginForm);
 
     if (res.data && res.data.success === true) {
       localStorage.setItem("token", res.data.token);
