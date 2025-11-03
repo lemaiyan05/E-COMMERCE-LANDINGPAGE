@@ -1024,7 +1024,7 @@ const checkPaymentStatus = () => {
 
     // Redirect to home page after 3 seconds
     setTimeout(() => {
-      window.location.href = "/home";  // 👈 Change to your actual home route if different
+      window.location.href = "https://e-commerce-landingpage-frontend.netlify.app/home";  // 👈 Change to your actual home route if different
     }, 3000);
   } 
   else if (status === "failed") {
