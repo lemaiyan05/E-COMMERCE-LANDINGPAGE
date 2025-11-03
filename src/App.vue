@@ -887,6 +887,8 @@ const message = ref("");
 const messageClass = ref("");
 
 // ------------------ Fetch Products ------------------
+console.log("🌍 API URL:", import.meta.env.VITE_API_URL);
+
 const fetchProducts = async () => {
   loadingProducts.value = true;
   try {
