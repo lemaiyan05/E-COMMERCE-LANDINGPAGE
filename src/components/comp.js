@@ -252,3 +252,70 @@ const scrollToHero = () => {
   }
 };
 </script>
+
+
+
+
+<section
+  id="hero"
+  class="relative flex flex-col md:flex-row justify-center items-center min-h-screen text-white overflow-hidden bg-gradient-to-br from-orange-500 to-pink-700 shadow-mb"
+>
+  <!-- Subtle Overlay for Contrast -->
+  <div class="absolute inset-0 bg-black/30 backdrop-blur-sm z-0"></div>
+
+  <div
+    class="container mx-auto flex flex-col md:flex-row items-center justify-between px-8 lg:px-24 xl:px-40 py-20 relative z-10"
+  >
+    <!-- Left Text -->
+    <div
+      class="md:w-1/2 space-y-8 animate-fadeInUp"
+    >
+      <h1
+        class="text-5xl lg:text-7xl xl:text-8xl font-extrabold leading-tight drop-shadow-2xl"
+      >
+        Empower Your
+        <span class="text-yellow-400">Digital Business</span>
+      </h1>
+
+      <p class="text-lg lg:text-xl xl:text-2xl max-w-lg opacity-90 text-gray-100">
+        Unlock your potential with powerful digital tools, smart analytics, and
+        seamless integrations — built to help your business thrive.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-5 pt-4">
+        <a
+          href="#about"
+          class="bg-yellow-400 text-black font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-yellow-500/40 transition-all duration-300"
+        >
+          Get Started
+        </a>
+        <a
+          href="#services"
+          class="border-2 border-white px-8 py-3 rounded-full hover:bg-white hover:text-orange-700 font-semibold transition-all duration-300"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="md:w-1/2 mt-16 md:mt-0 relative flex justify-center">
+      <div
+        class="absolute w-72 h-72 lg:w-96 lg:h-96 bg-yellow-400/20 rounded-full blur-3xl -z-10 animate-pulse-slow"
+      ></div>
+      <img
+        src="/ecomerce.png"
+        alt="Business Growth"
+        class="w-full max-w-xl xl:max-w-2xl rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700 animate-float-smooth"
+      />
+    </div>
+  </div>
+
+  <!-- Subtle Floating Icons / Shapes -->
+  <div
+    class="absolute top-20 left-20 w-10 h-10 bg-yellow-400/30 rounded-full blur-xl animate-bounce-slow"
+  ></div>
+  <div
+    class="absolute bottom-20 right-24 w-8 h-8 bg-pink-400/40 rounded-full blur-xl animate-float"
+  ></div>
+</section>

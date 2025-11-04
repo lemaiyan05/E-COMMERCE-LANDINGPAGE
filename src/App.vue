@@ -59,39 +59,36 @@
 <!-- HERO SECTION -->
 <section
   id="hero"
-  class="relative flex flex-col md:flex-row justify-center items-center min-h-screen text-white overflow-hidden bg-gradient-to-br from-orange-500 to-pink-700 shadow-mb"
+  class="relative flex flex-col md:flex-row items-center justify-between min-h-screen bg-gradient-to-r from-orange-500 to-pink-700 text-white overflow-hidden"
 >
-  <!-- Subtle Overlay for Contrast -->
-  <div class="absolute inset-0 bg-black/30 backdrop-blur-sm z-0"></div>
+  <!-- Soft Overlay for Depth -->
+  <div class="absolute inset-0 bg-black/20 backdrop-blur-sm z-0"></div>
 
+  <!-- Content Container -->
   <div
-    class="container mx-auto flex flex-col md:flex-row items-center justify-between px-8 lg:px-24 xl:px-40 py-20 relative z-10"
+    class="container mx-auto flex flex-col md:flex-row items-center justify-between px-8 lg:px-20 xl:px-32 py-20 relative z-10"
   >
-    <!-- Left Text -->
-    <div
-      class="md:w-1/2 space-y-8 animate-fadeInUp"
-    >
-      <h1
-        class="text-5xl lg:text-7xl xl:text-8xl font-extrabold leading-tight drop-shadow-2xl"
-      >
+    <!-- Left Text Section -->
+    <div class="md:w-1/2 space-y-8 animate-fadeInUp">
+      <h1 class="text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight">
         Empower Your
         <span class="text-yellow-400">Digital Business</span>
       </h1>
 
-      <p class="text-lg lg:text-xl xl:text-2xl max-w-lg opacity-90 text-gray-100">
+      <p class="text-lg lg:text-xl text-gray-100 max-w-md">
         Unlock your potential with powerful digital tools, smart analytics, and
         seamless integrations — built to help your business thrive.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-5 pt-4">
-        <a
-          href="#about"
-          class="bg-yellow-400 text-black font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-yellow-500/40 transition-all duration-300"
-        >
-          Get Started
-        </a>
+      <div class="flex flex-wrap gap-5 pt-4">
         <a
           href="#services"
+          class="bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-yellow-500/40 transition-all duration-300"
+        >
+          Explore Solutions
+        </a>
+        <a
+          href="#about"
           class="border-2 border-white px-8 py-3 rounded-full hover:bg-white hover:text-orange-700 font-semibold transition-all duration-300"
         >
           Learn More
@@ -99,27 +96,56 @@
       </div>
     </div>
 
-    <!-- Right Image -->
-    <div class="md:w-1/2 mt-16 md:mt-0 relative flex justify-center">
+    <!-- Right Image + Floating Icons -->
+    <div class="md:w-1/2 mt-16 md:mt-0 relative flex justify-center items-center">
+      <!-- Background Glow -->
       <div
         class="absolute w-72 h-72 lg:w-96 lg:h-96 bg-yellow-400/20 rounded-full blur-3xl -z-10 animate-pulse-slow"
       ></div>
+
+      <!-- Main Image (Team working on laptops) -->
       <img
-        src="/ecomerce.png"
-        alt="Business Growth"
-        class="w-full max-w-xl xl:max-w-2xl rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700 animate-float-smooth"
+        src="/collaboration.jpeg"
+        alt="Digital Collaboration"
+        class="w-full max-w-2xl xl:max-w-4xl rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700 animate-float-smooth"
+      />
+
+      <!-- Floating Icon Cards -->
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png"
+        alt="Analytics Icon"
+        class="absolute top-8 right-8 w-16 h-16 bg-white/90 p-3 rounded-xl shadow-lg hover:scale-110 transition-transform duration-300"
+      />
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png"
+        alt="Code Icon"
+        class="absolute top-1/4 left-0 w-14 h-14 bg-white/90 p-3 rounded-xl shadow-lg hover:scale-110 transition-transform duration-300"
+      />
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png"
+        alt="Store Icon"
+        class="absolute bottom-10 left-10 w-16 h-16 bg-white/90 p-3 rounded-xl shadow-lg hover:scale-110 transition-transform duration-300"
+      />
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png"
+        alt="Shopping Cart Icon"
+        class="absolute bottom-10 right-10 w-16 h-16 bg-white/90 p-3 rounded-xl shadow-lg hover:scale-110 transition-transform duration-300"
       />
     </div>
   </div>
 
-  <!-- Subtle Floating Icons / Shapes -->
+  <!-- Decorative Blurs -->
   <div
-    class="absolute top-20 left-20 w-10 h-10 bg-yellow-400/30 rounded-full blur-xl animate-bounce-slow"
+    class="absolute top-24 left-24 w-12 h-12 bg-yellow-400/40 rounded-full blur-2xl animate-float"
   ></div>
   <div
-    class="absolute bottom-20 right-24 w-8 h-8 bg-pink-400/40 rounded-full blur-xl animate-float"
+    class="absolute bottom-24 right-24 w-10 h-10 bg-pink-400/40 rounded-full blur-2xl animate-bounce-slow"
   ></div>
 </section>
+
 
 
 
